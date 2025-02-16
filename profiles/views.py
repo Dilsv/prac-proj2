@@ -12,7 +12,7 @@ class ProfileList(APIView):
         return Response(serializer.data)
 
 class ProfileDetail(APIView):
-    serializer_class = ProfileSerializer 
+    serializer_class = ProfileSerializer
     def get_object(self, pk):
         try:
             profile = Profile.objects.get(pk=pk)
